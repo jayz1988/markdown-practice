@@ -111,3 +111,43 @@ fixed | 뷰포트 | X
 ***
 
 ___
+
+# JS
+
+## = 연산자
+== 동등
+=== 일치
+
+## 참과 거짓(Truthly & Falsy)
+
+1) false
+2) 0
+3) null
+4) undefined
+5) NaN
+6) ''
+7) 0n
+
+## 데이터 타입 확인
+
+```javascript
+console.log(typeof 'a' === 'string')
+console.log(typeof 123 === 'number')
+console.log(typeof false === 'boolean')
+console.log(typeof undefined === 'undefined')
+console.log(typeof null === 'object') // 구분 안됨
+console.log(typeof [] === 'object') // 구분 안됨
+console.log(typeof {} === 'object') // 구분 안됨
+console.log(typeof function () {} === 'function')
+
+// console.log(null.constructor)
+console.log([].constructor === Array)
+console.log({}.constructor === Object)
+
+console.log(Object.prototype.toString.call(null).slice(8,-1) === 'Null')
+
+function checkType(data) {
+  return Object.prototype.toString.call(data).slice(8,-1)
+}
+console.log(checkType({}))
+```
