@@ -172,5 +172,46 @@ if (a && b) {
 if (a || b) {
   console.log('하나 이상이 참!')
 }
-```
 
+// Nullish 병합 연산자를 사용한 경우
+// null, undefined를 건너뛰고, 다른 data를 반환
+const num2 = n ?? 7
+console.log(num2)
+
+// 삼항 (Ternary)
+// 조건 ? 참 : 거짓
+console.log(a < 2 ? '참!' : '거짓...')
+```
+## 전개 연산자
+```javascript
+// 전개 연산자(Spread Operator)
+
+const a = [1,2,3]
+const b = [4,5,6]
+
+const c = a.concat(b)
+console.log(c)
+
+const d = [...a,...b]
+console.log(d) // [1,2,3,4,5,6]
+
+const aa = {x:1 , y:2}
+const bb = {y:3 , z:4}
+
+const cc = Object.assign({}, aa, bb)
+console.log(cc)
+
+const dd = {...aa, ...bb}
+console.log(dd)
+
+function fn(x,y,z) {
+  console.log(x,y,z)
+}
+
+fn(1,2,3)
+
+const aaa = [1,2,3]
+// fn(aaa[0], aaa[1], aaa[2])
+// fn(a)
+fn(...a)
+```
