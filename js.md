@@ -230,7 +230,7 @@ do {
 } while (n < 4)
 ```
 ## 함수
-# 선언과 표현 그리고 호이스팅
+### 선언과 표현 그리고 호이스팅
 
 ```javascript
 // 함수
@@ -253,7 +253,7 @@ const hello = function () {
   console.log('Hello~')
 }
 ```
-# 매개변수 패턴
+### 매개변수 패턴
 ```javascript
 // 매개변수 패턴
 //// 기본값
@@ -303,7 +303,7 @@ console.log(sum(1,2)) // 3
 console.log(sum(1,2,3,4)) // 10
 console.log(sum(1,2,3,4,5,6,7,8,9,10)) // 55
 ```
-# 화살표 함수
+### 화살표 함수
 ```javascript
 const a = () => {}
 const b = x => {}
@@ -323,7 +323,7 @@ const i = () => { return [1,2,3]}
 const j = () => [1,2,3]
 
 ```
-# 즉시실행함수
+### 즉시실행함수
 ```javascript
 ;(() => {})()  // (f)()
 ;(function () {})()  // (f)()
@@ -364,7 +364,7 @@ loadImage('https://www.gstatic.com/webp/gallery/4.jpg', imgEl => {
   containerEl.append(imgEl)
 })
 ```
-# 재귀
+### 재귀
 ```javascript
 // 함수 내부에서 다시 함수를 실행
 const userA = {
@@ -394,7 +394,7 @@ const getRootUser = user => {
 
 console.log(getRootUser(userD))
 ```
-# 호출 스케줄링
+### 호출 스케줄링
 ```javascript
 //setInterval, setTimeout
 const hello = () => {
@@ -407,7 +407,7 @@ h1El.addEventListener('click', () => {
   clearInterval(timeout)
 })
 ```
-# this
+### this
 ```javascript
 // this
 //// 일반 함수의 this는 호출 위치에서 정의
