@@ -151,3 +151,26 @@ function checkType(data) {
 }
 console.log(checkType({}))
 ```
+## 논리
+```javascript
+// 논리(Logical)
+
+const a = true
+const b = false
+
+// AND(그리고) 연산자
+// 가장 먼저 만나는 falsy data를 반환. 뒤쪽 data는 그냥 넘어감
+// falsy data가 없으면 가장 뒤쪽 data를 반환함
+
+if (a && b) {
+  console.log('모두가 참!')
+}
+
+// OR(또는) 연산자
+// 가장 먼저 만나는 truesy data를 반환. 뒤쪽 data는 그냥 넘어감
+// truesy data가 없으면 가장 뒤쪽 data를 반환함
+if (a || b) {
+  console.log('하나 이상이 참!')
+}
+```
+
