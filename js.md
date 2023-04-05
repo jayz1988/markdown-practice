@@ -453,3 +453,40 @@ const timer = {
 }
 timer.timeout()
 ```
+# Class
+## prototype
+
+```javascript
+// prototype
+
+const heropy = {
+  firstName: 'Heropy',
+  lastName: 'Park',
+  getFullName() {
+    return `${firstName} ${lastName}`
+  }
+}
+const neo = {
+  firstName: 'Neo',
+  lastName: 'Anderson'
+}
+
+console.log(heropy.getFullName())
+console.log(heropy.getFullName.call(neo))
+
+function User(first, last) {
+  this.firstName = first
+  this.lastName = last
+}
+
+User.prototype.getFullName = function () {
+    return `${firstName} ${lastName}`
+}
+
+const heropy = new User('Heropy', 'Park')
+const neo = new User('neo', 'Anderson')
+
+console.log(heropy)
+console.log(neo)
+
+```
