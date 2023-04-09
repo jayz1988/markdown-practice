@@ -517,3 +517,70 @@ const neo = new User('Neo','Anderson')
 console.log(heropy.getFullName())
 console.log(neo.getFullName())
 ```
+## Getter, Setter
+
+```javascript
+class User {
+  constructor(first, last) {
+    this.firstName = first
+    this.lastName = last
+    this.fullName = `${first} ${last}`
+  }
+}
+
+const heropy = new User('Heropy', 'Park')
+
+console.log(heropy)
+
+heropy.firstName = 'Neo'
+
+console.log(heropy)
+// fullName이 변경되지 않음
+
+class User {
+  constructor(first, last) {
+    this.firstName = first
+    this.lastName = last
+  }
+  getFullName() {
+    return `${firstName} ${lastName}`
+  }
+}
+
+const heropy = new User('Heropy', 'Park')
+
+console.log(heropy.getFullName())
+
+heropy.firstName = 'Neo'
+
+console.log(heropy.getFullName())
+// 바뀌긴 하는데 불편함
+
+class User {
+  constructor(first, last) {
+    this.firstName = first
+    this.lastName = last
+  }
+  get fullName() {
+    return `${first} ${last}`
+  }
+  set fullName(value) {
+    console.log(value);
+    [this.firstName, this.lastName] = value.split(' ')
+  }
+}
+
+const heropy = new User('Heropy', 'Park')
+
+console.log(heropy.fullName)
+
+heropy.firstName = 'Neo'
+
+console.log(heropy.fullName)
+
+heropy.fullName = 'Neo Anderson'
+console.log(heropy)
+// 속성을 가져다 사용할 수 있음
+// get은 값을 얻을 때 동작, set은 값을 지정할 때(= 연산자 사용 시) 동작함
+
+```
