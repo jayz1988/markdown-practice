@@ -584,3 +584,36 @@ console.log(heropy)
 // get은 값을 얻을 때 동작, set은 값을 지정할 때(= 연산자 사용 시) 동작함
 
 ```
+
+## 정적 메소드
+
+```javascript
+class User {
+  constructor(first, last) {
+    this.firstName = first
+    this.lastName = last
+  }
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
+  static isUser () {
+    if (user.firsetName && user.lastName) {
+      return true
+    } else {
+      return false
+    }
+  }
+}
+
+const heropy = new User('Heropy', 'Park')
+const neo = new User('Neo','Anderson')
+
+console.log(heropy.getFullName())
+console.log(neo.getFullName())
+console.log(User.getFullName())
+// 클래스 내부 함수는 호출할 수 없음
+console.log(User.isUser(heropy))
+// static 메서드는 호출 가능
+console.log(heropy.isUser())
+// static 메서드는 인스턴스에서 호출할 수 없음
+```
