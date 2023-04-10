@@ -615,5 +615,5 @@ console.log(User.getFullName())
 console.log(User.isUser(heropy))
 // static 메서드는 호출 가능
 console.log(heropy.isUser())
-// static 메서드는 인스턴스에서 호출할 수 없음
+// static 메서드는 인스턴스에서 호출할 수 없음!
 ```
